@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <form>
+        <input type="text" autocomplete="off" />
+        <button type="submit">Send</button>
+    </form>
+    <script>
+        const ws = new WebSocket("ws://localhost:8080");
+        ws.addEventListener("message", function (event) {
+            const data = event.data;
+            alert(data);
+        })
+
+        const inputField = document.querySelector("form input");
+
+        document.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const message = inputField.value;
+            ws.send(message);
+            inputField.value = "";
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "simple-websocket-server",
+  "version": "0.1.0",
+  "description": "Simple WebSocket server demo for SUTD IAP 2021 Introduction to Real Time Web Applications",
+  "main": "index.js",
+  "repository": "https://github.com/realtime-apps-iap/simple-websocket-server",
+  "author": "lowen",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^7.4.2"
+  }
+}
